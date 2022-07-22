@@ -1,7 +1,7 @@
 # DAS-PINNs:  A deep adaptive sampling method for solving high-dimensional partial differential equations
 
 
-TensorFlow implementation for [DAS-PINNs:  A deep adaptive sampling method for solving partial differential equations] (https://arxiv.org/abs/2112.14038).
+TensorFlow implementation for [DAS-PINNs:  A deep adaptive sampling method for solving high-dimensional partial differential equations] (https://arxiv.org/abs/2112.14038).
 
 
 # Requirements
