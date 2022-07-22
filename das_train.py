@@ -34,7 +34,6 @@ def parse_args():
     p.add_argument('--h1_reg', action='store_false', help='H1 regularization of the PDF.')
     p.add_argument('--shrink_rate', type=float, default=1.0, help='The shrinking rate of the width of NN.')
     p.add_argument("--bd", type=float, default=1, help="maximum boundary value")
-    p.add_argument("--flow_type", type=str, default='rNVP_KR_CDF', help="KR model type, rNVP_KR_CDF, rNVP or Augment_KR")
     p.add_argument("--n_block", type=int, default=5, help="The number of ResBlock for NN-PDE ")
     p.add_argument("--netu_depth", type=int, default=6, help="The number of FC layers for NN-PDE ")
     p.add_argument("--n_hidden", type=int, default=32, help="The number of hidden neurons for NN-PDE ")
