@@ -142,18 +142,7 @@ class DAS():
         xlb = -args.bd - 0.01
         xhb = args.bd + 0.01
 
-        if args.flow_type == 'rNVP':
-            pdf_model = BR_model.IM_rNVP('pdf_model_rNVP',
-                                            xlb, xhb,
-                                            n_depth=args.n_depth,
-                                            n_split_at = args.n_split_at,
-                                            n_width=args.n_width,
-                                            flow_coupling=args.flow_coupling,
-                                            rotation=args.rotation,
-                                            bounded_supp=args.bounded_supp)
-            
-        elif args.flow_type == 'rNVP_KR_CDF':
-            pdf_model = BR_model.IM_rNVP_KR_CDF('pdf_model_rNVP_KR_CDF',
+        pdf_model = BR_model.IM_rNVP_KR_CDF('pdf_model_rNVP_KR_CDF',
                                             args.n_dim,
                                             xlb, xhb,
                                             args.n_step,
@@ -164,8 +153,7 @@ class DAS():
                                             n_bins=args.n_bins4cdf,
                                             rotation=args.rotation,
                                             bounded_supp=args.bounded_supp)
-        else:
-            raise ValueError('Flow model type is not valid')
+
         self.pdf_model = pdf_model
 
 
