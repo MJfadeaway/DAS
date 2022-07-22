@@ -328,13 +328,6 @@ class affine_coupling(layers.Layer):
         h = self.f(z1)
         shift = h[:,0::2]
 
-        # orignal real NVP
-        #scale = tf.nn.sigmoid(h[:,1::2]+2.0)
-        #z2 += shift
-        #z2 *= scale
-        #if logdet is not None:
-        #  logdet += tf.reduce_sum(tf.math.log(scale), axis=[1], keepdims=True)
-
         # resnet-like trick
         # we suppressed both the scale and the shift.
         scale = alpha*tf.nn.tanh(h[:,1::2])
@@ -359,13 +352,6 @@ class affine_coupling(layers.Layer):
       elif self.flow_coupling == 1:
         h = self.f(z1)
         shift = h[:,0::2]
-
-        # original real NVP
-        #scale = tf.nn.sigmoid(h[:,1::2]+2.0)
-        #z2 /= scale
-        #z2 -= shift
-        #if logdet is not None:
-        #  logdet -= tf.reduce_sum(tf.math.log(scale), axis=[1], keepdims=True)
 
         # resnet-like trick
         # we suppressed both the scale and the shift.
