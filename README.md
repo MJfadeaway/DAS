@@ -43,10 +43,10 @@ python das_train.py
 
 
 
-## Citation
+# Citation
 If you use this code for your research, please cite our paper.
 ```
-@article{tang2021deep,
+@article{das,
   title={D{AS}-{PINN}s: A deep adaptive sampling method for solving high-dimensional partial differential equations},
   author={Tang, Kejun and Wan, Xiaoliang and Yang, Chao},
   journal={arXiv preprint arXiv:2112.14038},
