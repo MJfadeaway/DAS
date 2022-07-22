@@ -24,7 +24,7 @@ TensorFlow >= 2.0
 TensorFlow Probability
 
 
-# Simple Train with 1 GPU
+# Train
 ```bash
 python das_train.py
 ```
