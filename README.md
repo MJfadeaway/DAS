@@ -12,7 +12,7 @@ The residual in PINNs is treated as a probability density function and can be ap
 
 # Motivation
 
-Most of the volume of a high-dimensional cube is located around its corner ===>  Uniform samples is not a good choice for high-dimensional problems
+Most of the volume of a high-dimensional cube is located around its corner  ===>   Choosing uniform samples is not a good choice for high-dimensional problems
 
 <img align="middle" src="./assets/hypercube.png" alt="uni_ngood" />
 
