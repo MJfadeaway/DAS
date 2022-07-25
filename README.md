@@ -45,7 +45,7 @@ python das_train.py
 
 
 # Citation
-If you use this code for your research, please cite our paper.
+If you find this repo useful for your research, please consider to cite our paper
 ```
 @article{das,
   title={D{AS}-{PINN}s: A deep adaptive sampling method for solving high-dimensional partial differential equations},
