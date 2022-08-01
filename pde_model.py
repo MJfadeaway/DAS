@@ -398,8 +398,6 @@ def bimodal_exact(x):
     Numpy format
     the exact solution for bimodal problem
 
-    u(x, y) = 2[exp(-x^2-y^2) - exp(-(x-1)^2 - (y-1)^2)]
-
     Args:
     -----
         x: coordinates in the domain, a second order tensor where each row is a sample
