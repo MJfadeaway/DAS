@@ -47,7 +47,7 @@ python das_train.py
 # Citation
 If you find this repo useful for your research, please consider to cite our paper
 ```
-@article{tang2022pinns,
+@article{tangdas,
   title={D{AS-PINN}s: {A} deep adaptive sampling method for solving high-dimensional partial differential equations},
   author={Tang, Kejun and Wan, Xiaoliang and Yang, Chao},
   journal={Journal of Computational Physics},
