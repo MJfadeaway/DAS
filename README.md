@@ -51,6 +51,7 @@ If you find this repo useful for your research, please consider to cite our pape
   title={D{AS-PINN}s: {A} deep adaptive sampling method for solving high-dimensional partial differential equations},
   author={Tang, Kejun and Wan, Xiaoliang and Yang, Chao},
   journal={Journal of Computational Physics},
+  volume={476},
   pages={111868},
   year={2022},
   publisher={Elsevier}
