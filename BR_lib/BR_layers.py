@@ -633,37 +633,36 @@ class CDF_quadratic(layers.Layer):
                                    dtype=tf.float32, trainable=True)
 
     def call(self, inputs, logdet=None, reverse=False):
-        with tf.device("cpu:0"):
-            # normalize the PDF
-            self._pdf_normalize()
+        # normalize the PDF
+        self._pdf_normalize()
 
-            x = inputs
-            if not reverse:
-                # rescale such points in [-bound, bound] will be mapped to [0,1]
-                x = (x + self.bound) / 2.0 / self.bound
+        x = inputs
+        if not reverse:
+            # rescale such points in [-bound, bound] will be mapped to [0,1]
+            x = (x + self.bound) / 2.0 / self.bound
 
-                # cdf mapping
-                x = self._cdf(x, logdet)
-                if logdet is not None:
-                    x, logdet = x
-
-                # maps [0,1] back to [-bound, bound]
-                x = x * 2.0 * self.bound - self.bound
-            else:
-                # rescale such points in [-bound, bound] will be mapped to [0,1]
-                x = (x + self.bound) / 2.0 / self.bound
-
-                # cdf mapping
-                x = self._cdf_inv(x, logdet)
-                if logdet is not None:
-                    x, logdet = x
-
-                # maps [0,1] back to [-bound, bound]
-                x = x * 2.0 * self.bound - self.bound
+            # cdf mapping
+            x = self._cdf(x, logdet)
             if logdet is not None:
-                return x, logdet
+                x, logdet = x
 
-            return x
+            # maps [0,1] back to [-bound, bound]
+            x = x * 2.0 * self.bound - self.bound
+        else:
+            # rescale such points in [-bound, bound] will be mapped to [0,1]
+            x = (x + self.bound) / 2.0 / self.bound
+
+            # cdf mapping
+            x = self._cdf_inv(x, logdet)
+            if logdet is not None:
+                x, logdet = x
+
+            # maps [0,1] back to [-bound, bound]
+            x = x * 2.0 * self.bound - self.bound
+        if logdet is not None:
+            return x, logdet
+
+        return x
 
     # normalize the piecewise representation of pdf
     def _pdf_normalize(self):
