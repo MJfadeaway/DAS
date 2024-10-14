@@ -11,7 +11,7 @@ TensorFlow implementation for
 
 We also propose a deep adaptive sampling approach for surrogate modeling of parametric differential equations without labeled data, i.e., DAS for surrogates ($\text{DAS}^2$).
 We demonstrate the efficiency of the proposed method with a series of numerical experiments, including the operator learning problem, the parametric optimal control problem,
-and the lid-driven 2D cavity flow problem with a continuous range of Reynolds numbers from 100 to 1000. The code of $\text{DAS}^2$ will be released on another repository.
+and the lid-driven 2D cavity flow problem with a continuous range of Reynolds numbers from 100 to 1000. The code of $\text{DAS}^2$ has been released on [this repository](https://github.com/MJfadeaway/DAS-2).
 
 
 # Requirements
