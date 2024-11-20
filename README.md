@@ -6,7 +6,7 @@ TensorFlow implementation for
 
 
 # The following generalization work of DAS for surrogate modeling of parametric differential equations
-[Deep adaptive sampling for surrogate modeling without labeled data](https://arxiv.org/abs/2402.11283)
+[Deep adaptive sampling for surrogate modeling without labeled data](https://link.springer.com/article/10.1007/s10915-024-02711-1)
 
 
 We also propose a deep adaptive sampling approach for surrogate modeling of parametric differential equations without labeled data, i.e., DAS for surrogates ($\text{DAS}^2$).
